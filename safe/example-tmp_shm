@@ -1,0 +1,23 @@
+
+#   /etc/fstab
+LABEL=/tmp  /tmp    ext3    rw,nosuid,noexec,nodev  0   0
+
+#   link /var/tmp to /tmp
+mv  /var/tmp/*  /tmp
+ln  -s          /tmp    /var/tmp
+
+#   mk tmp
+dd  if=/dev/zero    of=/dev/tmpfs   bs=1M   count=10000
+mke2fs  -j  /dev/tmpfs
+cp  -av /tmp    /tmp.old
+mount   -o  loop,noexec,nosuid,rw   /dev/tmpfs  /tmp
+chmod   1777    /tmp
+mv  -f  /tmp.old/*  /tmp/
+rm  -rf /tmp.old
+
+#   mk tmp disk, /etc/fstab
+/dev/tmpfs  /tmp    ext3    loop,nosuid,noexec,rw   0   0
+
+
+#   tmpfs shm
+tmpfs   /dev/shm    tmpfs   defaults,nosuid,noexec,rw   0   0

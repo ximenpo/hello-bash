@@ -1,0 +1,4 @@
+
+user01      ALL = /bin/more /etc/shadow
+user02      ALL = (ALL) NOPASSWD: ALL
+CENTREON    ALL = NOPASSWD: /etc/init.d/nagios restart

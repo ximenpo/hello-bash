@@ -1,0 +1,16 @@
+
+Protocol                    2
+PubkeyAuthentication        yes
+AuthorizedKeysFile          .ssh/authorized_keys2
+PasswordAuthentication      no
+PermitEmptyPasswords        no
+ChallengeResponseAuthentication no      # disable s/key password
+Compression                 yes
+TCPKeepAlive                yes
+MaxStartups                 5
+UseDNS                      no
+MaxAuthTries                3
+AllowUsers                  user1   user2
+AllowGroups                 group1  group2
+DenyUsers                   user1   user2
+DenyGroups                  group1  group2

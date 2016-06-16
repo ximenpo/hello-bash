@@ -1,0 +1,17 @@
+
+login
+ls
+ps
+ifconfig
+du
+find
+netstat
+
+############
+chkrootkit      http://www.chkrootkit.org
+
+which --skip-alias awk cut echo find egrep id head ls netstat ps strings sed uname
+
+
+############
+RKHunter        http://www.rootkit.nl/projects/rootkit_hunter.html

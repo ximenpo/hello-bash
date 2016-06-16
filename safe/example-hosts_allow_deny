@@ -1,0 +1,3 @@
+
+#libwrapped  /etc/hosts.deny /etc/hosts.allow
+service:host(s) [:action]

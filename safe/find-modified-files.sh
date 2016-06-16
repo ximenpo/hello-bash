@@ -1,0 +1,3 @@
+#!  env     bash
+
+rpm     =Va
