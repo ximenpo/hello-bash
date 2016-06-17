@@ -22,9 +22,12 @@ done
 for item in \
     /etc/passwd    \
     /etc/shadow    \
+    /etc/group     \
+    /etc/gshadow   \
     /etc/hosts     \
     /etc/resolv.conf    \
     /etc/fstab     \
+    /etc/inittab   \
     /etc/sudoers   \
     ; do
     #statements

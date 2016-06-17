@@ -1,0 +1,10 @@
+#/etc/security/limits.conf
+
+*   -   65535
+
+
+#or
+ulimit  -SHn    65535
+
+#check
+ulimit  -n
